@@ -10,7 +10,7 @@ web.url = "http://requestbin.net/r/1j4k3wp1"
 GPIO.setmode(GPIO.BCM)
 
 # LED strip configuration:
-LED_COUNT      = 16      # Number of LED pixels.
+LED_COUNT      = 16      # Counted by Davide Filippi
 
 # LED_PIN1        = 18      # GPIO pin connected to the pixels (18 uses PWM!).
 # LED_PIN2        = 10      # GPIO pin connected to the pixels (10 uses SPI /dev/spidev0.0).
