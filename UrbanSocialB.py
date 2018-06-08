@@ -126,7 +126,7 @@ if __name__ == '__main__':
     args = parser.parse_args()
 
     # Create NeoPixel object with appropriate configuration.
-    strip1 = Adafruit_NeoPixel(LED_COUNT,    LED_PIN1,   LED_FREQ_HZ, LED_DMA, LED_INVERT, LED_BRIGHTNESS, LED_CHANNEL)
+    strip1 = Adafruit_NeoPixel(LED_COUNT,   LED_PIN1,   LED_FREQ_HZ, LED_DMA, LED_INVERT, LED_BRIGHTNESS, LED_CHANNEL)
     strip2 = Adafruit_NeoPixel(LED_COUNT,   LED_PIN2,   LED_FREQ_HZ, LED_DMA, LED_INVERT, LED_BRIGHTNESS, LED_CHANNEL)
 
     # Intialize the library (must be called once before other functions).
