@@ -1,10 +1,11 @@
-#!/usr/bin/python
+#!/usr/bin/python3
 import RPi.GPIO as GPIO
 import time
 from neopixel import *
 import argparse
 import vlc
 import web
+import os
 web.url = "http://requestbin.net/r/1j4k3wp1" 
 
 GPIO.setmode(GPIO.BCM)
@@ -120,6 +121,17 @@ def playMusic():
         
 
 if __name__ == '__main__':
+    # Set the system up
+    print('Redrecting audio output to jack...', end='')
+    os.system('amixer cset numid=3 1')
+    print('DONE')
+        
+    print('Cranking up the volume...', end='')
+    os.system('amixer set PCM 100%')
+    print('DONE')
+    
+    print('System ready')
+        
     # Process arguments
     parser = argparse.ArgumentParser()
     parser.add_argument('-c', '--clear', action='store_true', help='clear the display on exit')
